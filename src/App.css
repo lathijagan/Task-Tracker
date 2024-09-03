@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #e0f7fa; /* Light cyan background */
+  color: #333; /* Dark text for readability */
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  text-align: center;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #ffffff; /* White background for the app */
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+input, select, button {
+  margin: 10px 0;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  background-color: #ffffff; /* White background for inputs and buttons */
+  color: #333; /* Dark text */
+  border: 1px solid #ddd; /* Light gray border */
+  width: 100%; /* Full width for mobile */
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+button {
+  background-color: #ff6f61; /* Coral button color */
+  color: #ffffff; /* White text */
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e55b50; /* Darker coral on hover */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Wrap items on smaller screens */
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #ffffff; /* White background for tasks */
+  border-radius: 8px;
+  border: 1px solid #ddd; /* Light gray border */
+  min-height: 60px; /* Ensure equal height for each task box */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for task items */
+}
+
+li input[type="text"] {
+  flex: 1; /* Allow text input to take up available space */
+  margin-right: 10px;
+  border: 1px solid #ff6f61; /* Coral border for text input */
+}
+
+li select {
+  margin-right: 10px;
+  flex-basis: 120px; /* Fixed width for dropdowns */
+  border: 1px solid #ff6f61; /* Coral border for dropdown */
+}
+
+li button {
+  margin-left: 10px;
+  background-color: #ff6f61; /* Coral button color */
+  color: #ffffff; /* White text */
+  border: none;
+}
+
+@media (min-width: 768px) {
+  li {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr auto;
+    grid-gap: 10px;
+  }
+}
